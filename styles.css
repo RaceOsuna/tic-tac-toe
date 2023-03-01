@@ -1,0 +1,41 @@
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: 2px solid red;
+}
+
+.left_side,
+.right_side {
+  border: 2px solid red;
+  background: linear-gradient(#00d4ff, #6004c2, #090976, #020024);
+  width:25%;
+  text-align: center;
+}
+
+.game_board {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+}
+
+.player_turn {
+  text-align: start;
+}
+
+.game_grid {
+  border: 2px solid red;
+  display: grid;
+  grid-template-columns: auto;
+  width: 80%;
+  height: 80%;
+}
