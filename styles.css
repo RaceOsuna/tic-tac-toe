@@ -1,0 +1,70 @@
+html {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  /* border: 2px solid red; */
+}
+
+.left_side,
+.right_side {
+  /* border: 2px solid red; */
+  background: linear-gradient(#00d4ff, #6004c2, #356d86, #020024);
+  background-size: cover;
+  width:25%;
+  text-align: center;
+  color: azure;
+}
+
+.player_image {
+  position: relative;
+  width: 6vw;
+  padding-top: 1vh;
+}
+
+.player_one,
+.player_two {
+  font-size: xxx-large;
+}
+
+.game_board {
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 50%;
+  height: 100%;
+  
+}
+
+.player_turn {
+  text-align: start;
+  padding-bottom: 10%;
+  font-size: xxx-large;
+}
+
+.game_grid {
+  /* border: 2px solid red; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 3%;
+  width: 60%;
+  height: 60%;
+  background: linear-gradient(#00d4ff, #63c204, #356d86, #e8ae25);
+}
+
+.tile {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: white;
+  cursor: pointer;
+
+}
+
