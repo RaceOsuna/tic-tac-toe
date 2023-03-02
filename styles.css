@@ -12,9 +12,21 @@ body {
 .left_side,
 .right_side {
   /* border: 2px solid red; */
-  background: linear-gradient(#00d4ff, #6004c2, #090976, #020024);
+  background: linear-gradient(#00d4ff, #6004c2, #356d86, #020024);
+  background-size: cover;
   width:25%;
   text-align: center;
+  color: azure;
+}
+
+.player_image {
+  position: relative;
+  width: 8vw;
+}
+
+.player_one,
+.player_two {
+  font-size: xxx-large;
 }
 
 .game_board {
@@ -32,6 +44,7 @@ body {
 .player_turn {
   text-align: start;
   padding-bottom: 10%;
+  font-size: xxx-large;
 }
 
 .game_grid {
@@ -39,10 +52,10 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 2.5%;
+  grid-gap: 3%;
   width: 60%;
   height: 60%;
-  background-color: crimson;;
+  background: linear-gradient(#00d4ff, #63c204, #356d86, #e8ae25);
 }
 
 .tile {
