@@ -6,7 +6,7 @@ class Player {
 
   }
 
-   addWins() {
-    
+  addWins() {
+    this.wins +=1
    }
 }
