@@ -4,6 +4,7 @@ class Game {
     this.player2 = playerTwo
     this.isWin = false
     this.isDraw = false
+    this.canPlay = true
     this.board = [0, 1, 2, 
                   3, 4, 5, 
                   6, 7, 8]
@@ -25,23 +26,31 @@ switchTurns() {
   return
 }
 
-checkWinAcross() {
+winAcross() {
   for (var i = 0; i < this.board.length; i++) {
-  if (this.board[i] === this.board[i+1] && this.board[i] === this.board[i+2]) {
-    return this.win = true
-    }
-  }
-}
-
-checkWinDown() {
-  for (var i = 0; i < this.board.length; i++) {
-    if (this.board[0] === this.board[i+3] && this.board[i] === this.board[i+6]) {
+    if (this.board[0] === this.board[1] && this.board[0] === this.board[2]) {
       return this.win = true
-    }    
+  } else if (this.board[3] === this.board[4] && this.board[3] === this.board[5]) {
+      return this.win = true
+  } else if (this.board[6] === this.board[7] && this.board[6] === this.board[8]) {
+      return this.win = true
+  }
   }
 }
 
-checkWinDiagonal() {
+winDown() {
+  for (var i = 0; i < this.board.length; i++) {
+    if (this.board[0] === this.board[3] && this.board[i] === this.board[6]) {
+      return this.win = true
+  } else if (this.board[1] === this.board[4] && this.board[1] === this.board[7]) {
+      return this.win = true
+  } else if (this.board[2] === this.board[5] && this.board[2] === this.board[8]) {
+      return this.win = true
+  }  
+  }
+}
+
+winDiagonal() {
   for (var i = 0; i < this.board.length; i++) {
   if (this.board[0] === this.board[4] && this.board[0] === this.board[8]) {
     return true
@@ -57,13 +66,9 @@ checkForDraw() {
 }
 
 checkAllWins() {
-  if (this.checkWinAcross() || this.checkWinDown() || this.checkWinDiagonal()) {
+  if (game.winAcross() || game.winDown() || game.winDiagonal()) {
     return this.isWin = true
   }
-}
-
-trackWins() {
-  this.player1.wins++
 }
 
 
