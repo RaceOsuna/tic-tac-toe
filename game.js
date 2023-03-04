@@ -8,6 +8,7 @@ class Game {
                   3, 4, 5, 
                   6, 7, 8]
     this.moves = 0;
+    this.played = []
     if (this.moves % 2 === 0) {
       this.turn = this.player1
   } else {
