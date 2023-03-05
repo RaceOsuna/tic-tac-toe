@@ -20,6 +20,7 @@ function placeToken(event) {
   game.checkAllWins();
   game.checkForDraw();
   game.switchTurns();
+  toggleTokens()
   checkResults();
   }
 
@@ -35,7 +36,6 @@ function checkResults() {
     }
   }
 
-
 function resetBoard() {
   if (game.isPlayable === false) {
     for (var i = 0; i < squares.length; i++) {
@@ -43,6 +43,10 @@ function resetBoard() {
       squares[i].disabled = false
     }
   }
+}
+
+function toggleTokens() {
+  mainHeader.innerHTML = `It's <img class="player_image" src="assets/${game.turn.token}.png" alt=" A ${game.turn.token}">'s Turn`
 }
 
 function disable(event) {
