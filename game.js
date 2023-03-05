@@ -4,7 +4,7 @@ class Game {
     this.player2 = playerTwo
     this.turn = this.player1
     this.gamesPlayed = 0
-    this.canPlay = true
+    this.isPlayable = true
     this.winner = undefined
     this.board = [0, 1, 2, 
                   3, 4, 5, 
@@ -55,10 +55,9 @@ winDiagonal() {
 }
 
 checkForDraw() {
-  console.log(this.moves, this.winner)
   if (this.moves === 9 && this.winner === undefined) {
     this.winner = "draw";
-    return true 
+    this.isPlayable = false 
   }
 }
 
@@ -68,6 +67,7 @@ checkAllWins() {
     this.gamesPlayed += 1;
     this.winner = this.turn;
     this.winner.wins += 1;
+    this.isPlayable = false
     }
   }
 }

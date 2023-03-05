@@ -12,7 +12,6 @@ gameBoard.addEventListener('click', placeToken)
 
 // event handlers
 
-
 function placeToken(event) {
   var box = parseInt(event.target.id);
   game.board[box] = game.turn.token;
@@ -26,14 +25,23 @@ function placeToken(event) {
 
 function checkResults() {
     if (game.winner === game.player1 || game.winner === game.player2) {
-      mainHeader.innerHTML = `<img class="player_image" src="assets/${game.winner.token}.png" alt=" A ${game.winner.token}"> Wins!`;
-  } else if (game.winner === "draw"){
+      mainHeader.innerHTML = `<img class="player_image" src="assets/${game.winner.token}.png" alt=" A ${game.winner.token}"> Wins!`;     
+      setTimeout(resetBoard, 2500)
+    } else if (game.winner === "draw"){
       mainHeader.innerText = "It's a draw!";
-      console.log("It's a draw!")  ;
-  }
+      setTimeout(resetBoard, 2500)
+    }
   }
 
 
+function resetBoard() {
+  if (game.isPlayable === false) {
+    for (var i = 0; i < squares.length; i++) {
+      squares[i].innerHTML = ""
+      squares[i].disabled = false
+    }
+  }
+}
 
 function disable(event) {
   event.target.disabled = true;
