@@ -2,17 +2,14 @@ class Game {
   constructor(playerOne, playerTwo) {
     this.player1 = playerOne
     this.player2 = playerTwo
-    this.isWin = false
-    this.isDraw = false
+    this.turn = this.player1
+    this.gamesPlayed = 0
+    this.canPlay = true
+    this.winner = undefined
     this.board = [0, 1, 2, 
                   3, 4, 5, 
                   6, 7, 8]
     this.moves = 0;
-    if (this.moves % 2 === 0) {
-      this.turn = this.player1
-  } else {
-      this.turn = this.player2
-  }
   }
   
 switchTurns() {
@@ -21,49 +18,56 @@ switchTurns() {
   } else {
       this.turn = this.player1;
   }
-  return
 }
 
-checkWinAcross() {
+winAcross() {
   for (var i = 0; i < this.board.length; i++) {
-  if (this.board[i] === this.board[i+1] && this.board[i] === this.board[i+2]) {
-    return this.win = true
+    if (this.board[0] === this.board[1] && this.board[0] === this.board[2]) {
+     return true 
+  } else if (this.board[3] === this.board[4] && this.board[3] === this.board[5]) {
+     return true 
+  } else if (this.board[6] === this.board[7] && this.board[6] === this.board[8]) {
+     return true 
     }
   }
 }
 
-checkWinDown() {
+winDown() {
   for (var i = 0; i < this.board.length; i++) {
-    if (this.board[0] === this.board[i+3] && this.board[i] === this.board[i+6]) {
-      return this.win = true
-    }    
+    if (this.board[0] === this.board[3] && this.board[0] === this.board[6]) {
+     return true 
+  } else if (this.board[1] === this.board[4] && this.board[1] === this.board[7]) {
+     return true 
+  } else if (this.board[2] === this.board[5] && this.board[2] === this.board[8]) {
+     return true 
+  }  
   }
 }
 
-checkWinDiagonal() {
+winDiagonal() {
   for (var i = 0; i < this.board.length; i++) {
-  if (this.board[0] === this.board[4] && this.board[0] === this.board[8]) {
-    return true
-} else if (this.board[2] === this.board[4] && this.board[2] === this.board[6]) {
-      return this.win = true
+    if (this.board[0] === this.board[4] && this.board[0] === this.board[8]) {
+     return true 
+  } else if (this.board[2] === this.board[4] && this.board[2] === this.board[6]) {
+     return true 
     }
   }
 }
 
 checkForDraw() {
-  if (this.moves === 9)
-    return this.isDraw = true
-}
-
-checkAllWins() {
-  if (this.checkWinAcross() || this.checkWinDown() || this.checkWinDiagonal()) {
-    return this.isWin = true
+  console.log(this.moves, this.winner)
+  if (this.moves === 9 && this.winner === undefined) {
+    this.winner = "draw";
+    return true 
   }
 }
 
-trackWins() {
-  this.player1.wins++
-}
-
-
+checkAllWins() {
+    this.moves += 1
+  if (game.winAcross() || game.winDown() || game.winDiagonal()) {
+    this.gamesPlayed += 1;
+    this.winner = this.turn;
+    this.winner.wins += 1;
+    }
+  }
 }
