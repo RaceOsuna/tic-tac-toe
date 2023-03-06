@@ -2,14 +2,14 @@ class Game {
   constructor(playerOne, playerTwo) {
     this.player1 = playerOne
     this.player2 = playerTwo
-    this.turn = this.player1
     this.gamesPlayed = 0
+    this.turn = this.player1
     this.isPlayable = true
+    this.moves = 0;
     this.winner = undefined
     this.board = [0, 1, 2, 
                   3, 4, 5, 
                   6, 7, 8]
-    this.moves = 0;
   }
   
 switchTurns() {
@@ -57,7 +57,8 @@ winDiagonal() {
 checkForDraw() {
   if (this.moves === 9 && this.winner === undefined) {
     this.winner = "draw";
-    this.isPlayable = false 
+    this.gamesPlayed += 1;
+    this.isPlayable = false; 
   }
 }
 
@@ -67,7 +68,7 @@ checkAllWins() {
     this.gamesPlayed += 1;
     this.winner = this.turn;
     this.winner.wins += 1;
-    this.isPlayable = false
+    this.isPlayable = false;
     }
   }
 }
