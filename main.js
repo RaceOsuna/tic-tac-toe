@@ -42,8 +42,9 @@ function resetBoard() {
       squares[i].innerHTML = ""
       squares[i].disabled = false
     }
+    mainHeader.innerHTML = `It's <img class="player_image" src="assets/${game.turn.token}.png" alt=" A ${game.turn.token}">'s Turn`
     game.isPlayable = true
-    game.turn = game.player1
+    //game.turn = game.player1
     game.moves = 0;
     game.winner = undefined
     game.board = [0, 1, 2, 
