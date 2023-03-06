@@ -5,7 +5,7 @@ class Player {
     this.wins = 0;
   }
 
-  increaseWins(winner) {
-    winner.wins += 1
+  increaseWins() {
+    this.wins += 1
   }
 }
