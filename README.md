@@ -18,3 +18,12 @@ This is my final solo project. I'm 5 weeks into the Turing program and this proj
 ### Contributors: 
 [github.com/RaceOsuna](/github.com/RaceOsuna)
 
+### Learning Goals: 
+- Solidify and demonstrate understanding of:
+-  DRY JavaScript
+-  event delegation to handle similar event listeners
+- Understand the difference between the data model and how the data is displayed on  the DOM
+- Iterate through/filter DOM elements using for loops
+- Use problem solving process to break down large problems, solve things step by step, and not rely on an outside “answer” to a logical challenge
+
+
