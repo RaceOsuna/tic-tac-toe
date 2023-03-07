@@ -31,9 +31,11 @@ function checkResults() {
     mainHeader.innerHTML = `<img class="player_image" src="assets/${game.winner.token}.png" alt=" A ${game.winner.token}"> Wins!`;     
     playerOneWins.innerText = `Wins: ${game.player1.wins}`;
     playerTwoWins.innerText = `Wins: ${game.player2.wins}`;
+    disableBoard()
     setTimeout(resetBoard, 2000);
 } else if (game.winner === "draw") {
     mainHeader.innerText = "It's a draw!";
+    disableBoard()
     setTimeout(resetBoard, 2000);
     }
   }
@@ -52,14 +54,18 @@ function resetBoard() {
   }
 }
 
-function disableSquare(event) {
-  event.target.disabled = true;
-}
-
 function toggleTokens() {
   mainHeader.innerHTML = `It's <img class="player_image" src="assets/${game.turn.token}.png" alt=" A ${game.turn.token}">'s Turn`;
 }
 
+function disableSquare(event) {
+  event.target.disabled = true;
+}
 
+function disableBoard() {
+  for (i = 0; i < squares.length; i++) {
+    squares[i].disabled = true
+  }
+}
 
 
