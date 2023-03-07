@@ -26,4 +26,10 @@ This is my final solo project. I'm 5 weeks into the Turing program and this proj
 - Iterate through/filter DOM elements using for loops
 - Use problem solving process to break down large problems, solve things step by step, and not rely on an outside “answer” to a logical challenge
 
-
+### Wins + Challenges:
+- Win: Completing this project! 5 weeks ago this didnt seem possible
+- Win: Gain more knowledge of CSS
+- Win: Have a better understanding of DOM manipulation and event delegation
+- Challenge: Finding the best way to check for win/draw condition. There may not be a best way, but it think I took the simplest approach.
+- Challenge: Creating the gameboard. This is where I gained knowledge of CSS and grids.
+- Challenge: Disabling squares and making sure certain elements were't clickable. 
