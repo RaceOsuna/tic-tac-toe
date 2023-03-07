@@ -40,7 +40,7 @@ body {
 
 .player_turn {
   text-align: start;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
   font-size: xxx-large;
 }
 
@@ -48,7 +48,7 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-gap: 3%;
+  grid-gap: 2.5%;
   width: 60%;
   height: 60%;
   background: linear-gradient(#00d4ff, #63c204, #356d86, #e8ae25);
