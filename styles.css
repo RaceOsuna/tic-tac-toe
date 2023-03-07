@@ -8,6 +8,8 @@ body {
   padding: 0;
 }
 
+/* ASIDE */
+
 .left_side,
 .right_side {
   background: linear-gradient(#00d4ff, #6004c2, #356d86, #020024);
@@ -26,6 +28,8 @@ body {
 .player_two {
   font-size: xxx-large;
 }
+
+/* GAME BOARD */
 
 .game_board {
   display: flex;
@@ -66,14 +70,9 @@ body {
 
 }
 
-.hidden{
-  display: none;
-}
-
 button {
   pointer-events: all;
 }
-
 
 img {
   pointer-events: none;
