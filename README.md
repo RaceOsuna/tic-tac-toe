@@ -8,3 +8,13 @@ This web application allows for two players to play a game of Tic Tac Toe. The t
 - Clone your forked repository to your local machine
 - cd into the repository
 - Open it in your text editor
+
+### Preview of App: 
+![Preview]()
+
+### Context: 
+This is my final solo project. I'm 5 weeks into the Turing program and this project too about 20 hours to complete over a 5 day span.
+
+### Contributors: 
+[github.com/RaceOsuna](/github.com/RaceOsuna)
+

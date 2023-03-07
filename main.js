@@ -32,7 +32,7 @@ function checkResults() {
     playerOneWins.innerText = `Wins: ${game.player1.wins}`;
     playerTwoWins.innerText = `Wins: ${game.player2.wins}`;
     setTimeout(resetBoard, 2000);
-} else if (game.winner === "draw"){
+} else if (game.winner === "draw") {
     mainHeader.innerText = "It's a draw!";
     setTimeout(resetBoard, 2000);
     }
