@@ -10,7 +10,9 @@ This web application allows for two players to play a game of Tic Tac Toe. The t
 - Open it in your text editor
 
 ### Preview of App: 
-![Preview]()
+![Preview](https://media.giphy.com/media/oshh2BeKRIJGg1FFP3/giphy.gif)
+![Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWE1YWIwNTRlZWZlODllNzY5NjcxM2U5NmE2ZGRkMDVkOTJlYjAwNyZjdD1n/1FrAkS6hVspshPF1jG/giphy.gif)
+![Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2Q3YTQyZjRmNzRkOTY2OWY4YzMwNGNiYzZkYTFiYjJkZGI0ODMwOSZjdD1n/pIrUk9cZrO73Ji4DDr/giphy.gif)
 
 ### Context: 
 This is my final solo project. I'm 5 weeks into the Turing program and this project too about 20 hours to complete over a 5 day span.
@@ -32,4 +34,9 @@ This is my final solo project. I'm 5 weeks into the Turing program and this proj
 - Win: Have a better understanding of DOM manipulation and event delegation
 - Challenge: Finding the best way to check for win/draw condition. There may not be a best way, but it think I took the simplest approach.
 - Challenge: Creating the gameboard. This is where I gained knowledge of CSS and grids.
-- Challenge: Disabling squares and making sure certain elements were't clickable. 
+- Challenge: Disabling squares and making sure certain elements were't clickable.
+
+### Technologies
+- JavaScript
+- CSS
+- HTML
