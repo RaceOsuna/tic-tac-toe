@@ -15,7 +15,7 @@ This web application allows for two players to play a game of Tic Tac Toe. The t
 ![Preview](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExN2Q3YTQyZjRmNzRkOTY2OWY4YzMwNGNiYzZkYTFiYjJkZGI0ODMwOSZjdD1n/pIrUk9cZrO73Ji4DDr/giphy.gif)
 
 ### Context: 
-This is my final solo project. I'm 5 weeks into the Turing program and this project too about 20 hours to complete over a 5 day span.
+This is my final solo project for Mod 1 of the Turing program. I am 5 weeks into the program. The project took roughly 25 hours to complete over a 5 day span.
 
 ### Contributors: 
 [github.com/RaceOsuna](/github.com/RaceOsuna)
