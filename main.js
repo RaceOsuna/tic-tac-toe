@@ -23,7 +23,6 @@ function placeToken(event) {
   game.switchTurns();
   toggleTokens();
   checkResults();
-  console.log(game.board)
   }
 
 function checkResults() {
