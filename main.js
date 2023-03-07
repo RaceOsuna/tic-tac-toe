@@ -1,11 +1,11 @@
 // variables
 
 var game = new Game(new Player('player1', 'dragon'), new Player('player2', 'wizard'))
-var gameBoard = document.querySelector('.game_grid')
+var gameBoard = document.getElementById('gameGrid')
 var squares = document.querySelectorAll('.tile')
 var playerOneWins = document.getElementById('playerOne')
 var playerTwoWins = document.getElementById('playerTwo')
-var mainHeader = document.querySelector('.player_turn')
+var banner = document.getElementById('playerTurn')
 
 // event listeners
 
@@ -28,13 +28,13 @@ function placeToken(event) {
 
 function checkResults() {
   if (game.winner === game.player1 || game.winner === game.player2) {
-    mainHeader.innerHTML = `<img class="player_image" src="assets/${game.winner.token}.png" alt=" A ${game.winner.token}"> Wins!`;     
+    banner.innerHTML = `<img class="player_image" src="assets/${game.winner.token}.png" alt=" A ${game.winner.token}"> Wins!`;     
     playerOneWins.innerText = `Wins: ${game.player1.wins}`;
     playerTwoWins.innerText = `Wins: ${game.player2.wins}`;
     disableBoard()
     setTimeout(resetBoard, 2000);
 } else if (game.winner === "draw") {
-    mainHeader.innerText = "It's a draw!";
+    banner.innerText = "It's a draw!";
     disableBoard()
     setTimeout(resetBoard, 2000);
     }
@@ -46,7 +46,7 @@ function resetBoard() {
       squares[i].innerHTML = "";
       squares[i].disabled = false;
     }
-    mainHeader.innerHTML = `It's <img class="player_image" src="assets/${game.turn.token}.png" alt=" A ${game.turn.token}">'s Turn`;
+    banner.innerHTML = `It's <img class="player_image" src="assets/${game.turn.token}.png" alt=" A ${game.turn.token}">'s Turn`;
     game.isPlayable = true;
     game.moves = 0;
     game.winner = undefined;
@@ -55,7 +55,7 @@ function resetBoard() {
 }
 
 function toggleTokens() {
-  mainHeader.innerHTML = `It's <img class="player_image" src="assets/${game.turn.token}.png" alt=" A ${game.turn.token}">'s Turn`;
+  banner.innerHTML = `It's <img class="player_image" src="assets/${game.turn.token}.png" alt=" A ${game.turn.token}">'s Turn`;
 }
 
 function disableSquare(event) {

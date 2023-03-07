@@ -65,7 +65,7 @@ checkAllWins() {
   if (game.winAcross() || game.winDown() || game.winDiagonal()) {
     this.gamesPlayed += 1;
     this.winner = this.turn;
-    this.winner.wins += 1;
+    this.winner.increaseWins();
     this.isPlayable = false;
     }
   }
