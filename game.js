@@ -11,10 +11,10 @@ class Game {
   }
   
 switchTurns() {
-    if (this.turn === this.player1) {
+  if (this.turn === this.player1) {
       this.turn = this.player2;
-  } else {
-      this.turn = this.player1;
+} else {
+    this.turn = this.player1;
   }
 }
 
@@ -68,5 +68,12 @@ checkAllWins() {
     this.winner.increaseWins();
     this.isPlayable = false;
     }
+  }
+
+resetGame() {
+  game.isPlayable = true;
+  game.moves = 0;
+  game.winner = undefined;
+  game.board = [0, 1, 2, 3, 4, 5, 6, 7, 8]
   }
 }
