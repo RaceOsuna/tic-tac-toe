@@ -14,7 +14,7 @@ gameBoard.addEventListener('click', placeToken)
 // event handlers
 
 function placeToken(event) {
-  var box = parseInt(event.target.id);
+  var box = parseInt(event.target.closest("button").id);
   game.board[box] = game.turn.token;
   event.target.innerHTML += `<img class="player_image" src="assets/${game.turn.token}.png" alt=" A ${game.turn.token}">`
   disableSquare(event);
